@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <title>Tic Tac Toe</title>
+</head>
+<body>
+  <section id="home_screen">
+    <div class="home_header">
+      <img src="./assets/icon-x.svg" alt="x-icon">
+      <img src="./assets/icon-o.svg" alt="x-icon">
+    </div>
+    <div class="home_panel">
+      <h2 class="title">Pick player 1's mark</h2>
+      <div class="buttons">
+        <button class="buton_box active" onclick="activate('x')">
+          <svg class="x-icon" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15.002 1.147 32 18.145 48.998 1.147a3 3 0 0 1 4.243 0l9.612 9.612a3 3 0 0 1 0 4.243L45.855 32l16.998 16.998a3 3 0 0 1 0 4.243l-9.612 9.612a3 3 0 0 1-4.243 0L32 45.855 15.002 62.853a3 3 0 0 1-4.243 0L1.147 53.24a3 3 0 0 1 0-4.243L18.145 32 1.147 15.002a3 3 0 0 1 0-4.243l9.612-9.612a3 3 0 0 1 4.243 0Z"
+              fill="#A8BFC9" fill-rule="evenodd" />
+          </svg></button>
+        <button class="buton_box" onclick="activate('o')">
+          <svg class="o-icon" width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0Zm0 18.963c-7.2 0-13.037 5.837-13.037 13.037 0 7.2 5.837 13.037 13.037 13.037 7.2 0 13.037-5.837 13.037-13.037 0-7.2-5.837-13.037-13.037-13.037Z"
+              fill="#A8BFC9" />
+          </svg></button>
+      </div>
+      <h3 class="reminder">Remember: X goes first</h3>
+    </div>
+    <button class="new_gamecpu start_buttons" onclick="startGames('cpu')">
+      <p class="home_buttons">New Game (vs CPU)</p>
+    </button>
+    <button class="new_gameplayer start_buttons" onclick="startGame('player')">
+      <p class="home_buttons">New Game (vs player)</p>
+    </button>
+  </section>
+  <section id="game_screen">
+    <div class="game_screen_header">
+      <div class="game_header">
+        <img src="./assets/icon-x.svg" alt="x-icon">
+        <img src="./assets/icon-o.svg" alt="x-icon">
+      </div>
+      <div id="turn_container">
+        <img class="turn_icon" id="turn_icono" src="./assets/icon-o turn.svg" alt="turn icon 0">
+        <img class="turn_icon" id="turn_iconx" src="./assets/icon-x turn.svg" alt="turn icon 0">
+        <p class="turn_text">TURN</p>
+      </div>
+      <button id="restart_game" class="reset_btn_box">
+        <img class="reset_button" src="./assets/icon-restart.svg" alt="restart">
+      </button>
+    </div>
+    <section class="playground">
+      <div id="box1" class="boxes"></div>
+      <div id="box2" class="boxes"></div>
+      <div id="box3" class="boxes"></div>
+      <div id="box4" class="boxes"></div>
+      <div id="box5" class="boxes"></div>
+      <div id="box6" class="boxes"></div>
+      <div id="box7" class="boxes"></div>
+      <div id="box8" class="boxes"></div>
+      <div id="box9" class="boxes"></div>
+    </section>
+    <section class="win-lose-counters">
+      <div class="counters countx">
+        <p id="xwinstext" class="counter_texts">X (YOU)</p>
+        <p id="xwincount" class="count_num">0</p>
+      </div>
+      <div class="counters countdraw">
+        <p class="counter_texts">TIES</p>
+        <p id="tiecount" class="count_num">0</p>
+      </div>
+      <div class="counters counto">
+        <p id="owinstext" class="counter_texts">O (CPU)</p>
+        <p id="owincount" class="count_num">0</p>
+      </div>
+    </section>
+  </section>
+  <section id="blockinput">
+  </section>
+  <section id="restart_screen">
+    <div>
+      <h2 id="restartquestion">RESTART GAME?</h2>
+      <div id="request_restart">
+        <button class="restarttext" id="cancel">NO, CANCEL</button>
+        <button class="restarttext" id="yesrestart">YES, RESTART</button>
+      </div>
+    </div>
+  </section>
+  <section id="winner_screen">
+    <div>
+      <h6 id="winner_player">PLAYER 1 WINS!</h6>
+      <div id="win-flex">
+        <div class="win-icon">
+          <img id="xicon" src="./assets/icon-x.svg" alt="x-icon">
+          <img id="oicon" src="./assets/icon-o.svg" alt="x-icon">
+        </div>
+        <h2 id="winner_round">TAKES THE ROUND</h2>
+      </div>
+      <div id="winner_prompt">
+        <button class="restarttext" id="quitbtn">QUIT</button>
+        <button class="restarttext" id="nextroundbtn">NEXT ROUND</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="/tictactoe.js"></script>
+</body>
+</html>

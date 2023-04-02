@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root {
+    --sky: #31C3BD;
+    --skyhover: #65E9E4;
+    --yellow: #F2B137;
+    --yellowhover: #FFC860;
+    --bgdark: #1A2A33;
+    --bg: #1F3641;
+    --silver: #A8BFC9;
+    --silverhover: #DBE8ED;
+}
+
+body {
+    user-select: none;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bgdark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#home_screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home_header img {
+    width: 32px;
+}
+
+
+.home_header {
+    display: flex;
+    column-gap: 8.23px;
+    margin-bottom: 32.26px;
+}
+
+.home_panel {
+    width: 327px;
+    height: 205px;
+    background-color: var(--bg);
+    box-shadow: inset 0px -8px 0px #10212A;
+    border-radius: 15px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: var(--silver);
+    padding: 24px;
+    text-transform: uppercase;
+}
+
+.reminder {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.875px;
+    color: var(--silver);
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    padding-top: 17px;
+    text-transform: uppercase;
+}
+
+.start_buttons {
+    border-radius: 15px;
+    width: 327px;
+    height: 56px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: var(--bgdark);
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+}
+
+.buttons {
+    width: 279px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 10px;
+    background-color: var(--bgdark);
+}
+
+.buton_box {
+    width: 132px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.x-icon,
+.o-icon {
+    transform: scale(0.5);
+}
+
+.active {
+    background-color: var(--silverhover);
+}
+
+.active svg path {
+    fill: var(--bg);
+}
+
+.new_gamecpu {
+    background: var(--yellow);
+    box-shadow: inset 0px -8px 0px #CC8B13;
+    margin-top: 32px;
+}
+
+.new_gameplayer {
+    background: var(--sky);
+    box-shadow: inset 0px -8px 0px #118C87;
+    margin-top: 16px;
+}
+
+.home_buttons {
+    margin-bottom: 8px;
+}
+
+#game_screen {
+    display: none;
+    width: 375px;
+    height: 667px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.game_screen_header {
+    display: flex;
+    justify-content: space-between;
+    width: 328px;
+}
+
+.game_screen_icons {
+    display: flex;
+}
+
+#turn_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 96px;
+    height: 40px;
+    background: var(--bg);
+    box-shadow: inset 0px -4px 0px #10212A;
+    border-radius: 5px;
+}
+
+.reset_btn_box {
+    width: 40px;
+    height: 40px;
+    background: var(--silver);
+    box-shadow: inset 0px -4px 0px #6B8997;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.turn_text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.875px;
+    color: var(--silver)
+}
+
+.game_header img {
+    width: 32px;
+    height: 32px;
+}
+
+.game_header {
+    display: flex;
+    column-gap: 8.23px;
+}
+
+.turn_icon {
+    width: 16px;
+}
+
+#turn_icono {
+    display: none;
+}
+
+.boxes {
+    background: var(--bg);
+    box-shadow: inset 0px -8px 0px #10212A;
+    border-radius: 10px;
+    width: 96px;
+    height: 96px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.playground {
+    margin-top: 64px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.win-lose-counters {
+    display: flex;
+    justify-content: space-between;
+    width: 328px;
+
+}
+
+.counters {
+    margin-top: 20px;
+    width: 96px;
+    height: 64px;
+    border-radius: 10px;
+}
+
+.countx {
+    background: var(--sky);
+}
+
+.countdraw {
+    background: var(--silver);
+}
+
+.counto {
+    background-color: var(--yellow);
+}
+
+.counter_texts {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.75px;
+    color: var(--bgdark);
+    margin-top: 12px;
+}
+
+.count_num {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    color: var(--bgdark)
+}
+
+.xhover:hover {
+    background-image: url(./assets/icon-x-outline.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+}
+
+.ohover:hover {
+    background-image: url(./assets/icon-o-outline.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+}
+
+.pastex {
+    background-image: url(./assets/icon-x.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px;
+}
+
+.pasteo {
+    background-image: url(./assets/icon-o.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px;
+}
+
+.icon-class {
+    width: 40px;
+}
+
+#restart_screen {
+    background: var(--bg);
+    height: 228px;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 43%;
+
+}
+
+#restartquestion {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    color: var(--silver);
+    margin-bottom: 24px;
+}
+
+#cancel {
+    background: var(--silver);
+    box-shadow: inset 0px -4px 0px #6B8997;
+    border-radius: 10px;
+    height: 52px;
+    padding: 15px;
+
+}
+
+.restarttext {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: var(--bgdark)
+}
+
+#yesrestart {
+    background: var(--yellow);
+    box-shadow: inset 0px -4px 0px #CC8B13;
+    border-radius: 10px;
+    height: 52px;
+    padding: 15px;
+}
+
+#request_restart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+#winner_screen {
+    background: var(--bg);
+    height: 228px;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+}
+
+#winner_player {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.875px;
+    color: var(--silver);
+}
+
+#transparent{
+    display: flex;
+    flex-direction: column;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+
+#blockinput{
+    display: none;
+    width: 600px;
+    height: 600px;
+    background: transparent;
+    border-radius: 100px;
+    position: absolute;
+}
+
+#winner_round {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 1.5px;
+    color: var(--sky);
+    margin: 16px 0 20px 0;
+}
+
+#quitbtn {
+    background: var(--silver);
+    box-shadow: inset 0px -4px 0px #6B8997;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#nextroundbtn {
+    background: var(--yellow);
+    box-shadow: inset 0px -4px 0px #CC8B13;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#winner_prompt {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 16px;
+}
+
+#win-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#oicon {
+    display: none;
+    margin-right: 9px;
+    margin-top: -5px;
+}
+
+#xicon {
+    display: flex;
+    margin-right: 9px;
+}
+
+.win-icon img {
+    width: 28px;
+    height: 28px;
+}
+
+.winX {
+    background: var(--skyhover);
+}
+.winO {
+    background: var(--yellowhover);
+}
